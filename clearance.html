@@ -42,7 +42,9 @@ input[type=text],input[type=email],input[type=tel],textarea{width:100%;padding:1
 .step{display:none}.step.on{display:block}.steps{font-size:.85rem;color:var(--muted);margin-bottom:6px}.err{color:#8A1C1C;font-size:.88rem;min-height:1.2em;margin-top:6px}.row2{display:flex;gap:10px;margin-top:18px}.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.92rem;margin-top:14px}.chk input{margin-top:4px}
 .hp{position:absolute;left:-9999px}.skip{position:absolute;left:-9999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:200}
 </style>
-<!-- Google Ads / GA4 tag goes here -->
+<!-- Google tag (gtag.js), Google Ads account AW-786573012 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-786573012"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-786573012');</script>
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
@@ -584,7 +586,7 @@ input[type=text],input[type=email],input[type=tel],textarea{width:100%;padding:1
   form.querySelectorAll('.back').forEach(function(b){b.addEventListener('click',function(){show(cur-1);});});
   form.addEventListener('submit',function(e){if(!valid(0)||!valid(1)){e.preventDefault();show(!valid(0)?0:1);}});
   /* click tracking hooks: data-track values are directions, call, outbound-piece. Google Ads / GA4 event tags attach here. */
-  document.querySelectorAll('[data-track]').forEach(function(a){a.addEventListener('click',function(){if(window.gtag){gtag('event',a.getAttribute('data-track'));}});});
+  var CONV={directions:'AW-786573012/QGvZCOGF178dENTNiPcC',call:'AW-786573012/rs2ACOSF178dENTNiPcC'};document.querySelectorAll('[data-track]').forEach(function(a){a.addEventListener('click',function(){var k=a.getAttribute('data-track');if(window.gtag){gtag('event',k);if(CONV[k]){gtag('event','conversion',{'send_to':CONV[k]});}}});});
 })();
 </script>
 <!-- Call tracking snippet (if used) goes here, just above the closing body tag. Phone number on this page is written as (330) 657-2095 everywhere. -->

@@ -23,7 +23,7 @@ a.logo{text-decoration:none}.logo img{height:56px;width:auto}.logo .wordmark{tex
 .stars{color:#E8B84A;letter-spacing:1px;font-size:1rem}
 .reviews{background:var(--cream);padding:40px 0 8px}.rev-head{text-align:center;max-width:62ch;margin:0 auto 22px}.rev-head h2{margin-bottom:.2em}
 .rev-grid{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:760px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
-.rev{margin:0;background:#fff;border:1px solid #E3DACA;border-radius:6px;padding:20px 22px}.rev .stars{font-size:1.05rem;margin-bottom:8px}.rev p{margin:0 0 12px;font-size:1rem;color:var(--text)}.rev footer{font-size:.88rem;color:var(--muted);font-weight:600}
+.rev{margin:0;background:#fff;border:1px solid #E3DACA;border-radius:6px;padding:20px 22px}.rev .stars{font-size:1.05rem;margin-bottom:8px}.rev p{margin:0 0 12px;font-size:1rem;color:var(--text)}.rev-by{font-size:.88rem;color:var(--muted);font-weight:600}
 .trust{background:var(--parch);border-bottom:1px solid #DED5C5}.trust ul{list-style:none;margin:0;padding:12px 0;display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:center}.trust li{font-size:.9rem;font-weight:600;color:var(--brown)}.trust li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--burg);margin-right:8px;vertical-align:middle}
 .sec{padding:48px 0}.sec-alt{background:#FFFDF9}.lede{max-width:70ch;font-size:1.05rem;margin:0 0 24px;color:var(--muted)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}.card{background:#fff;border:1px solid #E3DCCF;border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
@@ -42,7 +42,9 @@ input[type=text],input[type=email],input[type=tel],textarea{width:100%;padding:1
 .step{display:none}.step.on{display:block}.steps{font-size:.85rem;color:var(--muted);margin-bottom:6px}.err{color:#8A1C1C;font-size:.88rem;min-height:1.2em;margin-top:6px}.row2{display:flex;gap:10px;margin-top:18px}.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.92rem;margin-top:14px}.chk input{margin-top:4px}
 .hp{position:absolute;left:-9999px}.skip{position:absolute;left:-9999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:200}
 </style>
-<!-- Google Ads / GA4 tag goes here -->
+<!-- Google tag (gtag.js), Google Ads account AW-786573012 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-786573012"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-786573012');</script>
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
@@ -51,7 +53,8 @@ input[type=text],input[type=email],input[type=tel],textarea{width:100%;padding:1
 </div></header>
 <main id="main">
 <section class="hero" id="top"><div class="wrap"><div class="eyebrow">Ohio Hardwood Furniture, Richfield, Ohio</div><h1>Thank you. We got your note.</h1><p>Someone from the showroom will get back to you. Or just come by and see it in person. Open Tuesday to Saturday.</p><div class="btns"><a class="btn btn-o" href="https://www.google.com/maps/dir/?api=1&destination=4050+Broadview+Rd%2C+Richfield%2C+OH+44286" target="_blank" rel="noopener" data-track="directions">Get Directions</a><a class="btn" href="clearance.html">Back to the pieces</a></div></div></section>
-<!-- CONVERSION SNIPPET: Google Ads form-lead conversion tag goes here -->
+<!-- Event snippet for OHF Ads - Ask About a Piece form conversion page -->
+<script>gtag('event','conversion',{'send_to':'AW-786573012/bWw0CN6F178dENTNiPcC'});</script>
 <section class="sec"><div class="wrap"><h2>Visit the showroom</h2><p class="addr"><strong>Ohio Hardwood Furniture</strong><br>4050 Broadview Rd, Richfield, OH 44286<br><a href="tel:+13306572095" data-track="call">(330) 657-2095</a></p></div></section>
 </main><section id="ask" class="modal"><div class="modal-box"><button type="button" class="close" aria-label="Close">&times;</button><form class="lead"><div class="steps"></div><div class="step on"><div class="err"></div></div><input type="hidden" name="piece"></form></div></section>
 <footer><div class="wrap"><div>Ohio Hardwood Furniture. Family-Run in Richfield, Ohio.<br>4050 Broadview Rd, Richfield, OH 44286 · <a href="tel:+13306572095" data-track="call">(330) 657-2095</a></div><div><a href="#top">Back to top</a></div></div></footer>
@@ -77,7 +80,7 @@ input[type=text],input[type=email],input[type=tel],textarea{width:100%;padding:1
   form.querySelectorAll('.back').forEach(function(b){b.addEventListener('click',function(){show(cur-1);});});
   form.addEventListener('submit',function(e){if(!valid(0)||!valid(1)){e.preventDefault();show(!valid(0)?0:1);}});
   /* click tracking hooks: data-track values are directions, call, outbound-piece. Google Ads / GA4 event tags attach here. */
-  document.querySelectorAll('[data-track]').forEach(function(a){a.addEventListener('click',function(){if(window.gtag){gtag('event',a.getAttribute('data-track'));}});});
+  var CONV={directions:'AW-786573012/QGvZCOGF178dENTNiPcC',call:'AW-786573012/rs2ACOSF178dENTNiPcC'};document.querySelectorAll('[data-track]').forEach(function(a){a.addEventListener('click',function(){var k=a.getAttribute('data-track');if(window.gtag){gtag('event',k);if(CONV[k]){gtag('event','conversion',{'send_to':CONV[k]});}}});});
 })();
 </script>
 <!-- Call tracking snippet (if used) goes here, just above the closing body tag. Phone number on this page is written as (330) 657-2095 everywhere. -->
